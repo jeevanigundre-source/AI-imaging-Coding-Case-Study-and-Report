@@ -1,0 +1,13 @@
+split,density,images,mean_objects,mean_area_fraction
+test,clustered,2,39.5,0.078
+test,dense,2,76.5,0.208
+test,normal,6,25.5,0.067
+test,sparse,2,8.0,0.024
+train,clustered,13,45.0,0.095
+train,dense,13,65.154,0.165
+train,normal,40,26.675,0.071
+train,sparse,14,8.429,0.023
+val,clustered,3,43.0,0.088
+val,dense,3,69.0,0.165
+val,normal,10,25.1,0.068
+val,sparse,4,7.25,0.019

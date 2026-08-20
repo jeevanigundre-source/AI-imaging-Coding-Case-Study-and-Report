@@ -1,0 +1,32 @@
+{
+  "otsu_mean_dice": 0.9732960697279843,
+  "otsu_mean_iou": 0.9480128466651404,
+  "unet_mean_dice": 0.9946386909770313,
+  "unet_mean_iou": 0.98934181145407,
+  "unet_wins": 20,
+  "n_images": 20,
+  "largest_unet_win": {
+    "image_id": "val_005",
+    "otsu_dice": 0.96199985633216,
+    "otsu_iou": 0.9267820069204152,
+    "unet_dice": 0.994688204904315,
+    "unet_iou": 0.9894325419803127,
+    "delta": 0.03268834857215497,
+    "n_otsu": 15,
+    "n_unet": 18,
+    "density": "clustered",
+    "n_objects": 48
+  },
+  "largest_otsu_win": {
+    "image_id": "val_018",
+    "otsu_dice": 0.9752066115702479,
+    "otsu_iou": 0.9516129032258065,
+    "unet_dice": 0.9901719901719902,
+    "unet_iou": 0.9805352798053528,
+    "delta": 0.014965378601742296,
+    "n_otsu": 7,
+    "n_unet": 7,
+    "density": "sparse",
+    "n_objects": 7
+  }
+}

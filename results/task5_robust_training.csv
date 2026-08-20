@@ -1,0 +1,6 @@
+variant,baseline_dice,robust_dice,delta
+"val split (20 images, mean)",0.9946,0.9846,-0.01
+clean,0.9951,0.9871,-0.008
+blur,0.6508,0.6911,0.0403
+low_contrast,0.0457,0.9874,0.9417
+noise_sigma0.10,0.82,0.9316,0.1116

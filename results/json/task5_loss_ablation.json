@@ -1,0 +1,32 @@
+{
+  "epochs": 40,
+  "results": [
+    {
+      "loss": "bce_dice",
+      "mean_val_dice": 0.9946,
+      "mean_val_iou": 0.9893,
+      "worst_image_dice": 0.9902,
+      "best_epoch": 28,
+      "best_epoch_dice": 0.9946,
+      "train_seconds": 627.9
+    },
+    {
+      "loss": "bce",
+      "mean_val_dice": 0.994,
+      "mean_val_iou": 0.988,
+      "worst_image_dice": 0.9906,
+      "best_epoch": 34,
+      "best_epoch_dice": 0.994,
+      "train_seconds": 744.9
+    },
+    {
+      "loss": "dice",
+      "mean_val_dice": 0.9926,
+      "mean_val_iou": 0.9853,
+      "worst_image_dice": 0.9771,
+      "best_epoch": 21,
+      "best_epoch_dice": 0.9926,
+      "train_seconds": 649.6
+    }
+  ]
+}

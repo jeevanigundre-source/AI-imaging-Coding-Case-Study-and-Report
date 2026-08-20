@@ -1,0 +1,113 @@
+{
+  "image_id": "val_007",
+  "ground_truth": {
+    "image_id": "val_007",
+    "split": "val",
+    "density": "normal",
+    "n_objects": 29,
+    "mean_intensity": 0.7249593661090727,
+    "area_fraction": 0.0779571533203125,
+    "seed": 20270722
+  },
+  "prompts": {
+    "naive": "What do you see in this medical image?",
+    "structured": "You are a descriptive image-annotation assistant for a\nmicroscopy teaching dataset. You are NOT a clinician and you must NOT diagnose,\ngrade, stage, name a disease, or suggest management.\n\nDescribe ONLY what is directly visible in this image: staining pattern, object\nshape, size and spacing, background, and technical image quality. Do not infer\npatient information, do not name organs you cannot see, and do not invent scale\nbars, magnification or units that are not shown.\n\nIf a field cannot be determined from the pixels alone, you MUST answer exactly\n\"uncertain\" rather than guessing. \"uncertain\" is a correct answer, not a failure.\n\nReturn ONE JSON object and nothing else -- no preamble, no markdown fence, no\ncommentary after the closing brace. Use exactly these keys:\n\n{\n  \"modality\": \"<one of: fluorescence_microscopy | brightfield_microscopy | histopathology | radiograph | uncertain>\",\n  \"tissue_type\": \"<short noun phrase, or 'uncertain'>\",\n  \"notable_features\": [\"<3-6 short visual observations>\"],\n  \"image_quality\": \"<one of: good | moderate | poor | uncertain>\"\n}"
+  },
+  "naive_run": {
+    "text": "This appears to be a microscopic image of a tissue sample. The bright ovoid objects are cells; several appear to overlap or cluster together. The distribution and density of the cells could be consistent with a hyperproliferative process, and further evaluation by a pathologist is advised.",
+    "generator": "offline_stub",
+    "provenance": "rule-based offline generator (NOT a language model); Ollama was unreachable at localhost:11434",
+    "latency_s": 0.0,
+    "parsed_json": null
+  },
+  "structured_runs": [
+    {
+      "text": "{\n  \"modality\": \"fluorescence_microscopy\",\n  \"tissue_type\": \"uncertain\",\n  \"notable_features\": [\n    \"bright ovoid objects on a near-black background\",\n    \"objects vary in size and are unevenly spaced\",\n    \"no scale bar, annotation or text overlay present\",\n    \"several discrete objects visible in the field\"\n  ],\n  \"image_quality\": \"good\"\n}",
+      "generator": "offline_stub",
+      "provenance": "rule-based offline generator (NOT a language model); Ollama was unreachable at localhost:11434",
+      "latency_s": 0.0,
+      "parsed_json": {
+        "modality": "fluorescence_microscopy",
+        "tissue_type": "uncertain",
+        "notable_features": [
+          "bright ovoid objects on a near-black background",
+          "objects vary in size and are unevenly spaced",
+          "no scale bar, annotation or text overlay present",
+          "several discrete objects visible in the field"
+        ],
+        "image_quality": "good"
+      }
+    },
+    {
+      "text": "{\n  \"modality\": \"fluorescence_microscopy\",\n  \"tissue_type\": \"uncertain\",\n  \"notable_features\": [\n    \"bright ovoid objects on a near-black background\",\n    \"no scale bar, annotation or text overlay present\",\n    \"objects vary in size and are unevenly spaced\"\n  ],\n  \"image_quality\": \"good\"\n}",
+      "generator": "offline_stub",
+      "provenance": "rule-based offline generator (NOT a language model); Ollama was unreachable at localhost:11434",
+      "latency_s": 0.0,
+      "parsed_json": {
+        "modality": "fluorescence_microscopy",
+        "tissue_type": "uncertain",
+        "notable_features": [
+          "bright ovoid objects on a near-black background",
+          "no scale bar, annotation or text overlay present",
+          "objects vary in size and are unevenly spaced"
+        ],
+        "image_quality": "good"
+      }
+    },
+    {
+      "text": "{\n  \"modality\": \"fluorescence_microscopy\",\n  \"tissue_type\": \"uncertain\",\n  \"notable_features\": [\n    \"bright ovoid objects on a near-black background\",\n    \"no scale bar, annotation or text overlay present\",\n    \"objects vary in size and are unevenly spaced\",\n    \"several discrete objects visible in the field\"\n  ],\n  \"image_quality\": \"good\"\n}",
+      "generator": "offline_stub",
+      "provenance": "rule-based offline generator (NOT a language model); Ollama was unreachable at localhost:11434",
+      "latency_s": 0.0,
+      "parsed_json": {
+        "modality": "fluorescence_microscopy",
+        "tissue_type": "uncertain",
+        "notable_features": [
+          "bright ovoid objects on a near-black background",
+          "no scale bar, annotation or text overlay present",
+          "objects vary in size and are unevenly spaced",
+          "several discrete objects visible in the field"
+        ],
+        "image_quality": "good"
+      }
+    }
+  ],
+  "structured_greedy_T0": {
+    "text": "{\n  \"modality\": \"fluorescence_microscopy\",\n  \"tissue_type\": \"uncertain\",\n  \"notable_features\": [\n    \"objects vary in size and are unevenly spaced\",\n    \"bright ovoid objects on a near-black background\",\n    \"several discrete objects visible in the field\",\n    \"no scale bar, annotation or text overlay present\"\n  ],\n  \"image_quality\": \"good\"\n}",
+    "generator": "offline_stub",
+    "provenance": "rule-based offline generator (NOT a language model); Ollama was unreachable at localhost:11434",
+    "latency_s": 0.0,
+    "parsed_json": {
+      "modality": "fluorescence_microscopy",
+      "tissue_type": "uncertain",
+      "notable_features": [
+        "objects vary in size and are unevenly spaced",
+        "bright ovoid objects on a near-black background",
+        "several discrete objects visible in the field",
+        "no scale bar, annotation or text overlay present"
+      ],
+      "image_quality": "good"
+    }
+  },
+  "repeatability": {
+    "n_repeats": 3,
+    "temperature": 0.8,
+    "identical_texts": false,
+    "n_distinct_texts": 3,
+    "stable_fields": {
+      "modality": true,
+      "tissue_type": true,
+      "notable_features": false,
+      "image_quality": true
+    }
+  },
+  "schema_compliance": {
+    "naive": 0,
+    "structured": 6,
+    "n": 6,
+    "naive_rate": 0.0,
+    "structured_rate": 1.0
+  },
+  "generator": "offline_stub",
+  "provenance": "rule-based offline generator (NOT a language model); Ollama was unreachable at localhost:11434"
+}

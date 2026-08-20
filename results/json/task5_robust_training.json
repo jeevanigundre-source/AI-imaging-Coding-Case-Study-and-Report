@@ -1,0 +1,32 @@
+[
+  {
+    "variant": "val split (20 images, mean)",
+    "baseline_dice": 0.9946,
+    "robust_dice": 0.9846,
+    "delta": -0.01
+  },
+  {
+    "variant": "clean",
+    "baseline_dice": 0.9951,
+    "robust_dice": 0.9871,
+    "delta": -0.008
+  },
+  {
+    "variant": "blur",
+    "baseline_dice": 0.6508,
+    "robust_dice": 0.6911,
+    "delta": 0.0403
+  },
+  {
+    "variant": "low_contrast",
+    "baseline_dice": 0.0457,
+    "robust_dice": 0.9874,
+    "delta": 0.9417
+  },
+  {
+    "variant": "noise_sigma0.10",
+    "baseline_dice": 0.82,
+    "robust_dice": 0.9316,
+    "delta": 0.1116
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "mean_dice": 0.994225,
+  "mean_iou": 0.9885333333333334,
+  "count_bias_cc": -11.916666666666666,
+  "count_mae_cc": 11.916666666666666,
+  "count_mape_cc": 25.30178590307744,
+  "count_bias_watershed": -6.5,
+  "count_mae_watershed": 6.5,
+  "count_mape_watershed": 13.953218225168259,
+  "area_fraction_mape": 0.740515635275912,
+  "density_class_agreement": 0.75,
+  "total_repairs": 0,
+  "generator": "offline_stub"
+}

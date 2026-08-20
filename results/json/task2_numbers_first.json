@@ -1,0 +1,51 @@
+{
+  "image_id": "val_007",
+  "ground_truth": {
+    "image_id": "val_007",
+    "split": "val",
+    "density": "normal",
+    "n_objects": 29,
+    "mean_intensity": 0.7249593661090727,
+    "area_fraction": 0.0779571533203125,
+    "seed": 20270722
+  },
+  "prompt": "You are interpreting a quantitative measurement table\nfrom an automated microscopy image-analysis pipeline. You have NOT seen the\nimage and you must not pretend that you have: describe only what the numbers\nbelow support, and never invent a colour, a stain, an artefact, a diagnosis or\na count that is not in the numbers.\n\nMEASUREMENTS\n- objects detected (connected components): 19\n- foreground fraction of the 256x256 field: 0.0780\n- object area px: mean 269.1, sd 223.4, median 204.0, range 48-826\n- equivalent diameter px: mean 17.2\n- mean eccentricity: 0.664  (0 = circle, 1 = line)\n- mean solidity: 0.937  (1 = convex, lower = lobed or merged)\n- mean circularity: 0.876\n- mean extent (area / bounding-box area): 0.694\n- mean object intensity: 0.237 (background 0.0116), scale 0-1\n\nInterpretation rules (apply them literally, do not re-derive them):\n  density_class    : sparse if n_objects < 15, normal if 15-34,\n                     dense if 35-59, clustered if >= 60 OR mean solidity < 0.90\n  shape_regularity : regular if mean eccentricity < 0.65 and mean solidity >= 0.95,\n                     irregular if mean eccentricity >= 0.80 or mean solidity < 0.90,\n                     otherwise mixed\n  quality_flag     : ok if the foreground fraction is 0.01-0.35 and n_objects >= 3;\n                     otherwise review\n\nRespond with EXACTLY two parts and nothing else:\n\nPARAGRAPH:\n<one paragraph, 3-5 sentences, plain English, quoting the numbers you rely on.\nSay \"uncertain\" wherever the table does not settle the question.>\n\nJSON:\n{\"n_objects\": <int>, \"density_class\": \"<sparse|normal|dense|clustered>\", \"shape_regularity\": \"<regular|mixed|irregular>\", \"quality_flag\": \"<ok|review>\"}",
+  "prompt_template": "You are interpreting a quantitative measurement table\nfrom an automated microscopy image-analysis pipeline. You have NOT seen the\nimage and you must not pretend that you have: describe only what the numbers\nbelow support, and never invent a colour, a stain, an artefact, a diagnosis or\na count that is not in the numbers.\n\nMEASUREMENTS\n{summary}\n\nInterpretation rules (apply them literally, do not re-derive them):\n  density_class    : sparse if n_objects < 15, normal if 15-34,\n                     dense if 35-59, clustered if >= 60 OR mean solidity < 0.90\n  shape_regularity : regular if mean eccentricity < 0.65 and mean solidity >= 0.95,\n                     irregular if mean eccentricity >= 0.80 or mean solidity < 0.90,\n                     otherwise mixed\n  quality_flag     : ok if the foreground fraction is 0.01-0.35 and n_objects >= 3;\n                     otherwise review\n\nRespond with EXACTLY two parts and nothing else:\n\nPARAGRAPH:\n<one paragraph, 3-5 sentences, plain English, quoting the numbers you rely on.\nSay \"uncertain\" wherever the table does not settle the question.>\n\nJSON:\n{{\"n_objects\": <int>, \"density_class\": \"<sparse|normal|dense|clustered>\", \"shape_regularity\": \"<regular|mixed|irregular>\", \"quality_flag\": \"<ok|review>\"}}",
+  "evidence_sent_to_llm": {
+    "n_objects": 19,
+    "foreground_fraction": 0.078,
+    "mean_area": 269.05,
+    "std_area": 223.39,
+    "min_area": 48.0,
+    "max_area": 826.0,
+    "median_area": 204.0,
+    "mean_eccentricity": 0.664,
+    "mean_solidity": 0.937,
+    "mean_circularity": 0.876,
+    "mean_extent": 0.694,
+    "mean_intensity": 0.237,
+    "background_intensity": 0.0116,
+    "mean_equiv_diameter": 17.18
+  },
+  "otsu": {
+    "threshold": 0.12936842441558838,
+    "dice": 0.9734859602778593,
+    "iou": 0.94834159359512,
+    "n_detected": 19,
+    "n_true": 29
+  },
+  "llm_raw": "PARAGRAPH:\nThe table lists 19 labelled objects covering 0.078 of the field, which places this image in the 'normal' density class. Mean object area is 269.1 px with a standard deviation of 223.4 px, so object size is noticeably variable. Mean eccentricity is 0.66 and mean solidity is 0.937, giving a 'mixed' shape class; solidity below 1.0 is consistent with either genuinely lobed objects or with two touching objects merged into one label, and the table alone cannot separate those, so that distinction is uncertain. Mean object intensity is 0.237 against a background of 0.012. Because the foreground fraction and object count are inside the expected range, the quality flag is 'ok'.\n\nJSON:\n{\"n_objects\": 19, \"density_class\": \"normal\", \"shape_regularity\": \"mixed\", \"quality_flag\": \"ok\"}",
+  "paragraph": "The table lists 19 labelled objects covering 0.078 of the field, which places this image in the 'normal' density class. Mean object area is 269.1 px with a standard deviation of 223.4 px, so object size is noticeably variable. Mean eccentricity is 0.66 and mean solidity is 0.937, giving a 'mixed' shape class; solidity below 1.0 is consistent with either genuinely lobed objects or with two touching objects merged into one label, and the table alone cannot separate those, so that distinction is uncertain. Mean object intensity is 0.237 against a background of 0.012. Because the foreground fraction and object count are inside the expected range, the quality flag is 'ok'.",
+  "json_record": {
+    "n_objects": 19,
+    "density_class": "normal",
+    "shape_regularity": "mixed",
+    "quality_flag": "ok"
+  },
+  "audit": {
+    "llm_json_parsed": true,
+    "repairs": []
+  },
+  "generator": "offline_stub",
+  "provenance": "rule-based offline generator (NOT a language model); Ollama was unreachable at localhost:11434"
+}

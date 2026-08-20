@@ -1,0 +1,9 @@
+{
+  "image_id": "test_000_lowcontrast",
+  "density": "sparse, corrupted",
+  "n_objects": 8,
+  "otsu_dice": 0.9801496908558412,
+  "unet_dice": 0.04574325331742955,
+  "n_otsu": 8,
+  "n_unet": 1
+}

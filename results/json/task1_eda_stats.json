@@ -1,0 +1,28 @@
+{
+  "n_images": {
+    "train": 80,
+    "val": 20,
+    "test": 12,
+    "test_corrupted": 4
+  },
+  "image_size": [
+    256,
+    256
+  ],
+  "grayscale_conversion": "ITU-R 601-2 luma (skimage.color.rgb2gray equivalent)",
+  "foreground_mean_intensity": 0.2554,
+  "background_mean_intensity": 0.0159,
+  "foreground_fraction_mean": 0.081,
+  "objects_per_image": {
+    "min": 5,
+    "max": 85,
+    "mean": 32.4
+  },
+  "density_regimes": {
+    "sparse": 20,
+    "normal": 56,
+    "dense": 18,
+    "clustered": 18
+  },
+  "channel_note": "nuclei are DAPI-like blue; luma weights B by 0.0721, so grayscale conversion costs ~3x foreground contrast versus using the blue channel (ablated in 02_classical_llm.py)"
+}

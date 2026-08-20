@@ -1,0 +1,74 @@
+{
+  "per_density": [
+    {
+      "gray": "blue",
+      "density": "clustered",
+      "dice": 0.972,
+      "iou": 0.946,
+      "count_err": -27.0
+    },
+    {
+      "gray": "blue",
+      "density": "dense",
+      "dice": 0.971,
+      "iou": 0.943,
+      "count_err": -29.333
+    },
+    {
+      "gray": "blue",
+      "density": "normal",
+      "dice": 0.974,
+      "iou": 0.949,
+      "count_err": -4.5
+    },
+    {
+      "gray": "blue",
+      "density": "sparse",
+      "dice": 0.974,
+      "iou": 0.949,
+      "count_err": -0.25
+    },
+    {
+      "gray": "luma",
+      "density": "clustered",
+      "dice": 0.972,
+      "iou": 0.946,
+      "count_err": -27.0
+    },
+    {
+      "gray": "luma",
+      "density": "dense",
+      "dice": 0.971,
+      "iou": 0.944,
+      "count_err": -29.333
+    },
+    {
+      "gray": "luma",
+      "density": "normal",
+      "dice": 0.974,
+      "iou": 0.949,
+      "count_err": -4.5
+    },
+    {
+      "gray": "luma",
+      "density": "sparse",
+      "dice": 0.974,
+      "iou": 0.949,
+      "count_err": -0.25
+    }
+  ],
+  "overall": [
+    {
+      "gray": "blue",
+      "dice": 0.973,
+      "iou": 0.948,
+      "count_err": -10.75
+    },
+    {
+      "gray": "luma",
+      "dice": 0.973,
+      "iou": 0.948,
+      "count_err": -10.75
+    }
+  ]
+}

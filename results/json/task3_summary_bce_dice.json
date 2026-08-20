@@ -1,0 +1,30 @@
+{
+  "loss": "bce_dice",
+  "epochs": 40,
+  "mean_val_dice": 0.9946386909770313,
+  "mean_val_iou": 0.98934181145407,
+  "per_density": [
+    {
+      "density": "clustered",
+      "dice": 0.9952,
+      "iou": 0.9904
+    },
+    {
+      "density": "dense",
+      "dice": 0.995,
+      "iou": 0.9901
+    },
+    {
+      "density": "normal",
+      "dice": 0.9954,
+      "iou": 0.9908
+    },
+    {
+      "density": "sparse",
+      "dice": 0.9921,
+      "iou": 0.9844
+    }
+  ],
+  "train_seconds": 627.9,
+  "n_params": 482449
+}
